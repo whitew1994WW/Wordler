@@ -13,9 +13,6 @@ import copy
 
 
 class NaiveWordler(AbstractWordler):
-    def __init__(self):
-        self.reset_wordler()
-
     def get_first_word(self):
         random.shuffle(self.possible_words)
         self.word_history.append(self.possible_words[0])

@@ -24,11 +24,11 @@ class Wordle:
     def load_word_list():
         with open(Wordle._valid_guesses_filename) as infile:
             reader = csv.reader(infile)
-            valid_guesses = {rows[0]: 1 for rows in reader}
+            valid_guesses = {rows[0]: 0 for rows in reader}
 
         with open(Wordle._valid_solutions_filename) as infile:
             reader = csv.reader(infile)
-            valid_solutions = {rows[0]: 1 for rows in reader}
+            valid_solutions = {rows[0]: 0 for rows in reader}
         return valid_guesses, valid_solutions
 
     def guess(self, current_guess):
@@ -82,7 +82,6 @@ class Wordle:
     def random_five_letter_word(self):
         random_word = random.choice(list(self.valid_solutions))
         return random_word
-
 
     def check_word_guessed(self):
         current_guess_score = self.guess_score_history[7 - self._guesses_left]
