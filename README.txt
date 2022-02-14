@@ -24,9 +24,18 @@ each score. If a letter is GREY then it removes all words containing that letter
 words containing letters in that place. If a letter is AMBER then it removes all words that do not contain that letter.
 
 The wordler is evaluated using "evaluate_wordler_algorithm", which gives it two scores. An Average number of guesses for
-won games and a success rate. This algorithm scored 0.5360691144708424 for success rate  and 4.777598710717164 for the
+won games and a success rate. This algorithm scored 0.54 for success rate  and 4.78 for the
 average number of guesses. There is plenty of room for improvement, by choosing a better starting word, choosing from the list of possile words using
 english language statistics etc.
+
+## WordScoreWordler
+
+This algorithm, is the same as Naive Wordler, except it ranks each word before guessing. During a training stage it plays
+the wordle game 10000 times, and ranks each word based on how likely it is to succeed. For each guess it removes not possible words
+like the naive wordler and then chooses the remaining word with the highest rank.
+
+This algorithm scored 0.75 for success rate and 4.56 for the average number of guesses.
+
 
 ## Rules for building a Wordler:
 
