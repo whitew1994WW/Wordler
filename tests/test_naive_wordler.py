@@ -1,7 +1,7 @@
 import random
 import unittest
 from Wordler.Wordle import Wordle
-from Wordler.models.naive import NaiveWordler
+from Wordler.models.NaiveWordler import NaiveWordler
 from Wordler.evaluate_worlder_algorithm import evaluate_wordler
 
 class TestNaiveWordler(unittest.TestCase):

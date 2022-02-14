@@ -7,13 +7,13 @@ Never reuses grey letters.
 """
 
 from Wordler.Wordle import Wordle
+from Wordler.models.AbstractWordler import AbstractWordler
 import random
 import copy
 
 
-class NaiveWordler:
+class NaiveWordler(AbstractWordler):
     def __init__(self):
-        random.seed(1)
         self.reset_wordler()
 
     def get_first_word(self):
